@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kcet-Route Map</title>
+    <style>
+        
+        body {
+
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        h1 {
+            text-align: center;
+            background-color: lightslategrey;
+            position: fixed;
+            color: white;
+            padding: 20px;
+            margin: 0;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        
+        
+        p {
+            font-size: 18px;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+            color: #34495e;
+            padding: 0 20px;
+            text-align: justify;
+        }
+
+       
+        .grid-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+       
+        .grid-container img {
+            max-width: 40%;
+            border-radius: 12px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 35px;
+
+        }
+
+        
+        .grid-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-arrow {
+            position: fixed;
+            top: 3px;
+            left: 20px;
+            z-index: 2;
+            font-size: 24px;
+            background-color:lightslategrey;
+            color:black;
+            text-decoration: none;
+            padding: 8px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-arrow:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: lightslategrey;
+            color:black;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-arrow">&#8592;</a>
+    
+    <h1 >College Campus Navigation App</h1>
+
+    
+    <p style=" padding-top: 140px;">Navigating the KCET campus is challenging, especially for newcomers and those with mobility issues.
+        A user-friendly navigation solution is needed to provide accurate directions and improve accessibility, ensuring a seamless campus experience for everyone.
+    </p>
+
+    
+    <div class="grid-container">
+        <img src="campusnav.jpeg" alt="campus">
+    </div>
+
+    
+    <p>
+        The KCET Route map project aims to provide a specialized indoor navigation system. By leveraging cutting-edge technologies and user-friendly features, it aims to simplify campus exploration, facilitate seamless navigation, and contribute to a modern and innovative environment for students, faculty members, and visitors. This project also addresses the specific needs of individuals, promoting inclusivity and accessibility throughout the campus. The KCET Route map project aims to enhance the efficiency and reliability of navigation for users on the campus.
+    </p>
+
+    
+    <div class="grid-container">
+        <img src="campusview.png" alt="map img">
+    </div>
+
+    
+    <footer style="color: black">
+        &copy; 2024 KCET Campus Navigation Project
+    </footer>
+</body>
+</html>

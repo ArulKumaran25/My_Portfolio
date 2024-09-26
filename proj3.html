@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Expo</title>
+
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: lightslategrey;
+            position: fixed;
+            color:white;
+            padding: 20px;
+            margin: 0;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        p {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            font-size: 18px;
+            line-height: 1.7;
+            text-align: justify;
+            color: #333;
+            margin-top: 100px; 
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            font-size: 24px;
+            background-color: lightslategrey;
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slider img {
+            width: 100%; 
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            transform: scale(1.2) translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: lightslategrey;
+            color: black;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-button">&#8592;</a>
+    <h1>Trip Expo Website</h1>
+    <p>
+        Trip Expo is a web application designed to showcase unfamiliar tourist spots and famous landmarks within a particular region. It leverages a dataset collected locally within the city to provide comprehensive information about these places. This tool is especially beneficial for travelers or locals who want to explore hidden gems alongside well-known attractions in their area.
+    </p>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="img1.png" alt="Screenshot 1">
+            <img src="img2.png" alt="Screenshot 2">
+            <img src="img3.png" alt="Screenshot 3">
+            <img src="img4.png" alt="Screenshot 4">
+        </div>
+
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+    <p style="margin-bottom: 70px;">
+        Developed using Python, Trip Expo takes advantage of its robust libraries and frameworks to efficiently manage and process the data. The use of Python allows for seamless integration of data handling, from gathering local information to dynamically displaying it on the web interface.
+    </p>
+    <footer>
+        &copy; 2024 Trip Expo - Discover Hidden Gems
+    </footer>
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slider img');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        function updateSliderPosition() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSliderPosition();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSliderPosition();
+        });
+    </script>
+
+</body>
+</html>

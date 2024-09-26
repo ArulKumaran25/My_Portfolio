@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - LPG Leakage Detection</title>
+    
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: lightslategrey;
+            position: fixed;
+            color: white;
+            padding: 20px;
+            z-index: 1;
+            margin: 0;
+            width: 100%;
+        }
+
+        .back-arrow {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            font-size: 24px;
+            background-color: lightslategrey;
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-arrow:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+            padding: 0 20px;
+            font-size: 18px;
+        }
+
+        .grid-container {
+            text-align: center;
+            margin: 30px auto;
+        }
+
+        .grid-container img {
+            max-width: 70%;
+            height: auto;
+            border: 5px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .grid-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: lightslategray;
+            color: black;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-arrow">&#8592;</a>
+    
+    <h1>LPG Leakage Detection</h1>
+
+    <div class="container">
+        <p style="margin-top: 70px; text-align: justify;">
+            While LPG is an essential need of every household, its leakage could lead to a disaster. To alert on LPG
+            leakage and prevent any mishappening, there are various products to detect the leakage. Here we have developed 
+            an Arduino-based LPG gas detector alarm. If gas leakage occurs, this system detects it and makes an alert by
+            buzzing the buzzer attached to the circuit. This system is easy to build and anyone with some knowledge of 
+            electronics and programming can build it.
+        </p>
+
+        <div class="grid-container">
+            <img src="lpg.jpg" alt="LPG Leakage System">
+        </div>
+
+        <p>
+            We have used an LPG gas sensor module to detect LPG Gas. When LPG gas leakage occurs, it gives a HIGH pulse on 
+            its DO pin, and Arduino continuously reads its DO pin. When Arduino gets a HIGH pulse from the LPG Gas module,
+            it shows “LPG Gas Leakage Alert” message on a 16x2 LCD and activates the buzzer, which beeps repeatedly until
+            the gas detector module no longer senses gas in the environment. When the LPG gas detector module gives a LOW 
+            pulse to Arduino, the LCD shows “No LPG Gas Leakage” message.
+        </p>
+
+        <div class="grid-container">
+            <img src="sysdesign2.png" alt="System Design">
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 My Portfolio | Project 1: LPG Leakage Detection
+    </footer>
+</body>
+</html>

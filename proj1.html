@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Vehicle Number Plate Recognition</title>
+    
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            background-color:lightslategrey;
+            color: white;
+            position: fixed;
+            color: lightblack;
+            padding: 20px;
+            z-index: 1;
+            margin: 0;
+            width: 100%;
+        }
+
+        .back-arrow {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            font-size: 24px;
+            background-color:lightslategrey;
+            color:black;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-arrow:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+            padding: 0 20px;
+            font-size: 18px;
+        }
+
+        .grid-container {
+            text-align: center;
+            margin: 30px auto;
+        }
+
+        .grid-container img {
+            max-width: 70%;
+            height: auto;
+            border: 5px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .grid-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color:lightslategray;
+            color: black;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <a href="index.html" class="back-arrow">&#8592;</a>
+    
+    <h1>Vehicle Number Plate Recognition</h1>
+
+    <div class="container">
+        <p style="margin-top: 70px; text-align: justify;">
+            Road safety is of prime importance as road accidents are among the biggest causes of deaths in the country.
+            Road Accidents are majorly due to violators and lawbreakers of road safety rules like not wearing helmets etc.
+            Even though there are many smart systems to monitor these violations, it is complicated to keep a track of the
+            data and view it efficiently anywhere. Also monitoring the permit details of other state vehicles is hard. 
+            A method was proposed to address this issue, based on Deep learning and Optical Character Recognition (OCR).
+            Here we detect the riders not wearing helmets using object detection by comparing YOLOv2 and YOLOv3. 
+        </p>
+
+        <div class="grid-container">
+            <img src="numplate.jpg" alt="Vehicle Number Plate">
+        </div>
+
+        <p>
+            This simplifies the task of traffic police who can’t continuously and efficiently monitor all the violators.
+            We gathered our data from three different sources. Kaggle was used to collect the data set. A number of items
+            can be recognized by the real-time object recognition system YOLO in a single frame. It recognizes objects 
+            more precisely and faster than other recognition systems. It can predict up to 9000 classes and even unseen
+            classes. It divides the image into an m*m matrix, and each grid detects objects within itself.
+        </p>
+
+        <p>
+            The trained model is tested using a test dataset after training in order to measure the performance. For
+            Number plate detection, we use OCR-based character recognition. The recognized license plate images of violators
+            are captured and stored in a database, which is then sent to the concerned department. The stored data can be 
+            easily accessed. Metrics considered for evaluation is Accuracy. YOLOv3 exhibits strong performance in terms of
+            accuracy with 95.5%. Keywords: Deep learning, Object detection, Convolutional Neural Network, YOLOv2, YOLOv3.
+        </p>
+
+        <div class="grid-container">
+            <img src="sysdesign.png" alt="System Design">
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 My Portfolio | Project 1: Vehicle Number Plate Recognition
+    </footer>
+</body>
+</html>
